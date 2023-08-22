@@ -5,20 +5,20 @@ import java.util.List;
 
 public class TodoList {
 
-    private List<Todo> todos;
+    private List<Task> todos;
 
-    public TodoList(List<Todo> todos) {
+    public TodoList(List<Task> todos) {
         this.todos = todos;
     }
 
     void addTodo(String description){
-       this.todos.add(new Todo(description));
+       this.todos.add(new Task(description));
 
     }
 
     void removeTodo(String description){
-        List<Todo> removeTodo = new ArrayList<>();
-        for (Todo todo: todos) {
+        List<Task> removeTodo = new ArrayList<>();
+        for (Task todo: todos) {
             if(todo.getDescription().equals(description)){
                 removeTodo.add(todo);
 
@@ -33,7 +33,7 @@ public class TodoList {
     }
     List<String> TodoDescriptions(){
         List<String> descritions = new ArrayList<String>();
-        for (Todo description: this.todos
+        for (Task description: this.todos
              ) {
             descritions.add(description.getDescription());
         }

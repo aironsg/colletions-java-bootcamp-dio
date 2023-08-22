@@ -1,12 +1,9 @@
 package br.com.devairon.lists.todoList;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Todo {
+public class Task {
     private String description;
 
-    Todo(String description){
+    Task(String description){
         this.description = description;
     }
 

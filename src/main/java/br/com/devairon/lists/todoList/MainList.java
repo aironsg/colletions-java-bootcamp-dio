@@ -6,7 +6,7 @@ public class MainList {
     public static void main(String[] args) {
         //este é o corpo de entrada do exercicio de list
 
-        TodoList todoList = new TodoList(new ArrayList<Todo>());
+        TodoList todoList = new TodoList(new ArrayList<Task>());
         todoList.addTodo("realizar exercicio Java 1");
         todoList.addTodo("realizar exercicio Java 2");
         todoList.addTodo("realizar exercicio Java 3");
