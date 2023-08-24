@@ -1,4 +1,4 @@
-package br.com.devairon.sets.contactBook;
+package br.com.devairon.maps.contantBook;
 
 public class Contact {
 
@@ -10,19 +10,12 @@ public class Contact {
         this.phoneNumber = phoneNumber;
     }
 
+
     public String getName() {
         return name;
     }
 
     public String getPhoneNumber() {
         return phoneNumber;
-    }
-
-    @Override
-    public String toString() {
-        return "Contato{" +
-                "Nome ='" + name + '\'' +
-                ", Número Telefone='" + phoneNumber + '\'' +
-                '}';
     }
 }

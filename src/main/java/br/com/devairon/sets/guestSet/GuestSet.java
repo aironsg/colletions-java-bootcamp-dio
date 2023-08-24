@@ -12,19 +12,42 @@ public class GuestSet {
     }
 
     public void addGuest(String name, String invitationCode) {
-        //TODO  Adiciona um convidado ao conjunto.
+        Guest guest = new Guest(name, invitationCode);
+        if(guestSet.isEmpty() || !guestSet.contains(guest)){
+            guestSet.add(new Guest(name, invitationCode));
+        }
+
     }
 
     public void removeGuestByInvitationCode(String invitationCode) {
-        //TODO Remove um convidado do conjunto com base no código do convite.
+        int count = 0;
+        for (Guest guest: guestSet) {
+            if(!guestSet.isEmpty()){
+                if(guest.getInvitationCode().equalsIgnoreCase(invitationCode)){
+                    guestSet.remove(guest);
+                    System.out.println("Convidado removido com sucesso!");
+                    break;
+                }
+            }
+
+            if(guestSet.isEmpty() || (!guest.getInvitationCode().equalsIgnoreCase(invitationCode) && count == guestSet.size())){
+                System.out.println("Erro ao encontrar o convidado, verifique os dados e tente novamente");
+            }
+            count++;
+        }
     }
 
     public int countGuest() {
-
         return this.guestSet.size();
     }
 
     public void displayGuest() {
         //TODO Exibe todos os convidados do conjunto.
+        for (Guest guest: guestSet
+             ) {
+            System.out.println("==================================");
+            System.out.println(guest.toString());
+            System.out.println("==================================");
+        }
     }
 }

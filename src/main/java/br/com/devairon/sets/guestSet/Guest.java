@@ -20,9 +20,9 @@ public class Guest {
 
     @Override
     public String toString() {
-        return "Guest{" +
-                "name='" + name + '\'' +
-                ", invitationCode='" + invitationCode + '\'' +
+        return "Convidado{" +
+                "nome='" + name + '\'' +
+                ", Código do convite='" + invitationCode + '\'' +
                 '}';
     }
 }

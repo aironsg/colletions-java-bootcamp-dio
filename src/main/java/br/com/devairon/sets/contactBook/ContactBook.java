@@ -13,7 +13,7 @@ public class ContactBook {
     }
 
     public void addContact(String name, String phoneNumber){
-        //TODO  Adiciona um contato à agenda.
+        this.contacts.add(new Contact(name, phoneNumber));
     }
 
     public void displayContacts(){
